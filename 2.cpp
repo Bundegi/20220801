@@ -4,6 +4,8 @@
 #define endl "\n"
 #define fast ios::sync_with_stdio(0), cin.tie(nullptr), cout.tie(nullptr)
 using namespace std;
+
+//1920 ¼öÃ£±â
 int part(vector<long long> &N2, int left, int right) {
 	int pivot = N2[left];
 	int low = left + 1;
@@ -38,6 +40,7 @@ void quick(vector<long long>& N2, int left, int right) {
 	}
 }
 int main() {
+	fast;
 	long long N;
 	long long M;
 	cin >> N;
@@ -47,7 +50,8 @@ int main() {
 		cin >> a;
 		N2.push_back(a);
 	}
-	quick(N2,0, N2.size()-1);
+	//quick(N2,0, N2.size()-1);
+	sort(N2.begin(), N2.end(), less<long long>());
 	cin >> M;
 	long long b;
 	for (int i = 0; i < M; i++) {
